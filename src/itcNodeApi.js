@@ -13,10 +13,7 @@ module.exports = new (function() {
 	api.fork = forkController;
 
 	api.join = function(node1, node2) {
-		var nodes = {
-			Node1: node1,
-			Node2: node2
-        };
+		var nodes = {node1, node2};
         return joinController(nodes);
 	};
 

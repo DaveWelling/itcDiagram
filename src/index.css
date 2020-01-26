@@ -65,3 +65,8 @@ footer {
 .selectedNodeInfo {
     float: right;
 }
+
+.link {
+    stroke: #000;
+    stroke-opacity: .6;
+}

@@ -52,6 +52,8 @@ module.exports = (function ItcNodeGraph() {
 		layoutLinks = force.links();
         layoutNodes = force.nodes();
 
+        svg.append("g").attr("class", "links");
+
 		for (var i = 0; i < itcNodes.length; i++) {
 			addItcNodeToLayout(itcNodes[i], i - 1, i);
 		}
@@ -112,10 +114,15 @@ module.exports = (function ItcNodeGraph() {
 	function restart() {
 
 		// Draw a line between the nodes of the force layout
-		linkD3Selection = linkD3Selection.data(layoutLinks);
-		linkD3Selection.enter().insert("line", "line").attr({
-			stroke: '#808080'
-		});
+        //linkD3Selection = linkD3Selection.data(layoutLinks);
+        linkD3Selection = svg.select(".links").selectAll(".link")
+             .data(layoutLinks);
+
+        linkD3Selection.enter().append("line")
+        .attr("class", "link")
+
+        linkD3Selection.exit().remove();
+
 
 		// Create a g (svg group) for each entry in the nodesData
 		// These g are intended to hold the ITC node graph

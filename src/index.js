@@ -150,7 +150,7 @@ $('#sendAction').click(function() {
                 alert('You must select two different nodes to join');
                 return;
             }
-            constitcNode = itcNodeApi.join(selectedItcNode1, selectedItcNode2);
+            const itcNode = itcNodeApi.join(selectedItcNode1, selectedItcNode2);
             d3.select(selectedForceNode1).classed('usedNode', true);
             d3.select(selectedForceNode2).classed('usedNode', true);
             itcLayout.addItcNode(itcNode, node1Index, null, node2Index);
