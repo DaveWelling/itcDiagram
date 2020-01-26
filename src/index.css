@@ -1,0 +1,67 @@
+footer {
+    height: 100%;
+}
+.selectedNodes {
+    float: left;
+    padding: 0 20px;
+}
+
+.actionSelection {
+    float: left;
+    padding: 10px 40px;
+    border-width: 1px 0 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.sendButton {
+    float: left;
+    padding: 60px 20px 60px 0;
+}
+
+.actionForm {
+    position: fixed;
+    bottom: 0;
+}
+
+.viewPort {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+}
+
+#selectedNode1 {
+    color: coral;
+}
+
+#selectedNode2 {
+    color: blue;
+}
+
+.node1Selection {
+    fill: coral;
+}
+
+.node2Selection {
+    fill: blue;
+}
+
+.currentNode {
+    border-width: 10px;
+    border-color: red;
+    border-style: solid;
+}
+
+.usedNode {
+    fill: lightgray;
+}
+
+.instructions {
+    color: green;
+}
+
+.selectedNodeInfo {
+    float: right;
+}

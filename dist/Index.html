@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Itc Node Graph</title>
+    </head>
+
+    <body>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xlink:xlink="http://www.w3.org/1999/xlink"
+            class="viewPort"
+            height="100%"
+            width="100%"
+        ></svg>
+        <div class="selectedNodeInfo"></div>
+        <footer>
+            <form class="actionForm">
+                <div class="selectedNodes">
+                    <h4>Selecting which node:</h4>
+                    <p id="selectedNode1">
+                        Node1<input name="nodeSelectionForAction" type="radio" value="node1" checked />
+                    </p>
+                    <p id="selectedNode2">Node2<input name="nodeSelectionForAction" type="radio" value="node1" /></p>
+                </div>
+                <div class="actionSelection">
+                    <p><input type="radio" name="ItcAction" value="Event" />Event</p>
+                    <p><input type="radio" name="ItcAction" value="Join" />Join</p>
+                    <p><input type="radio" name="ItcAction" value="Fork" />Fork</p>
+                </div>
+                <div class="sendButton">
+                    <input type="button" id="sendAction" value="Do Action" />
+                </div>
+                <div class="instructions">
+                    <p>Instructions</p>
+                    Select a node for an action by clicking it. Select an action type: event, join or fork. Events and
+                    fork actions require only a node1 (orange) selection. Joins also require a node2 (blue) selection.
+                </div>
+            </form>
+        </footer>
+        <script src="app.bundle.js"></script>
+        <!-- <script src="src/itcNodeApi.js"></script>
+	<script src="src/nodeDiagram.js"></script>
+	<script src="src/forceLayoutForNodeDiagrams.js"></script> -->
+    </body>
+</html>
