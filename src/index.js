@@ -88,7 +88,7 @@ function getTextForItcNode(itcNode) {
         'Id: ' +
         itcNode.id +
         '</br>  Value: ' +
-        itcNode.someValue0 +
+        itcNode.value +
         '</br> Itc Id: ' +
         getTextForId(itcNode.stamp.itcId) +
         '</br> Itc Event:' +
